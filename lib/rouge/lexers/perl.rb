@@ -95,7 +95,7 @@ module Rouge
 
         # Perl allows any non-whitespace character to delimit
         # a regex when `m` is used.
-        rule %r(m(\S).*\1[msixpodualngc]*), re_tok
+        rule %r(m([^A-Za-z_]).*\1[msixpodualngc]*), re_tok
         rule %r(((?<==~)|(?<=\())\s*/(\\\\|\\/|[^/])*/[msixpodualngc]*),
           re_tok, :balanced_regex
 
